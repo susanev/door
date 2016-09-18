@@ -9,7 +9,6 @@ A `Door` object can
 - be either locked or unlocked
 
 Here are some rules about how Doors work:
-
 - Once the writing (inscription) on a Door is set, it cannot be changed
 - You may open a Door if and only if it is unlocked and closed
 - You may close a Door if and only if it is open
