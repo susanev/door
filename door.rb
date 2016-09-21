@@ -49,7 +49,8 @@ end
 # I expect the outcome to be true.
 # test = Door.new(false, false)
 # puts test.open
-# expected it to return true. 
+# expected it to return true.
+# returned true
 
 #created 2nd test, to see if the door is open, can I open it?
 # test2 = Door.new(true, false)
@@ -57,8 +58,8 @@ end
 # expect it to be false. As you cannot open an open door. Actually, printed the message,"door is already open...trish, you will need to place an error here."
 
 # Created 2nd test, to see if the door was open, and locked.
-test3 = Door.new(false, true)
-puts test3.open
+# test3 = Door.new(false, true)
+# puts test3.open
 # expect it would be false, or display a message that says,"you cannot open a locked door."
 
 
