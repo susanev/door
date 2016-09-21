@@ -1,5 +1,6 @@
 #door.rb
-
+require_relative '../lib/door'
+# require_relative 'Spec_helper'
 
 class Door
 
@@ -29,45 +30,43 @@ class Door
     end
 
   end
-  #
+
   def close()
-    if is_door_open == true
-      is_door_open = false
+    if @is_door_open == true
+      @is_door_open = false
     elsif
-      is_door_open == false
+      @is_door_open == false
       puts "You cannot close, a closed door!"
     else
       # if door is closed,
-      is_door_open == false && is_door_locked == true
+      @is_door_open == false && @is_door_locked == true
       puts "You cannot close, a locked door."
     end
-
-
   end
 
   def lock()
     # if door is closed, && its unlocked
-    if is_door_open == false && is_door_locked == false
+    if @is_door_open == false && @is_door_locked == false
       # then you can, lock the door.
-      is_door_locked = true
-    elsif is_door_open == true
+      @is_door_locked = true
+    elsif @is_door_open == true
       # if the door is in an opened state, it cannot be locked.
       puts "You can't lock an open door!"
     else
       #if the door is closed, && its locked, you cant already lock it agin.
-      is_door_open == false && is_door_locked == true
+      @is_door_open == false && @is_door_locked == true
       puts "You can't techincally lock an already locked door."
     end
   end
 
   def unlock()
     # if door is closed, && door is locked.
-    if is_door_open == false && is_door_locked == true
+    if @is_door_open == false && @is_door_locked == true
       # then you can lock the door!
-      is_door_locked = false
+      @is_door_locked = false
     elsif
       # if the door is closed, && door unlocked - you cannot unlock door.
-      is_door_open == false && is_door_locked == false
+      @is_door_open == false && @is_door_locked == false
       puts "You cant unlock, and unlocked door, friend!"
     end
   end
@@ -92,6 +91,10 @@ end
 # test3 = Door.new(false, true)
 # puts test3.open
 # expect it would be false, or display a message that says,"you cannot open a locked door."
+
+# 
+# test3 = Door.new(true, true)
+# puts test3.lock
 
 
 ## OpenDoor ##
