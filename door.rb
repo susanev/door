@@ -29,9 +29,20 @@ class Door
 
   end
   #
-  # def close()
-  #
-  # end
+  def close()
+    if is_door_open == true
+      is_door_open = false
+    elsif
+      is_door_open == false
+      puts "You cannot close, a closed door!"
+    else
+      # if door is closed,
+      is_door_open == false && is_door_locked == true
+      puts "You cannot close, a locked door."
+    end 
+
+
+  end
   #
   # def lock()
   #
