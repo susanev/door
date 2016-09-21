@@ -45,6 +45,7 @@ describe Door do
     expect(door.unlock).must_equal(nil)
     # or raise an argument error.
   end
+  # supposedly this is where my unexpected end of input is. 
 
     ################### ClosedDoor tests ###################
     ## can be opened
