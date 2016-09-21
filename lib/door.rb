@@ -1,5 +1,6 @@
 #door.rb
 
+
 class Door
 
 # not sure how to deal with this yet: description
@@ -67,15 +68,11 @@ class Door
     elsif
       # if the door is closed, && door unlocked - you cannot unlock door.
       is_door_open == false && is_door_locked == false
-      puts "You cant unlock, and unlocked door, friend!" 
+      puts "You cant unlock, and unlocked door, friend!"
     end
   end
 
 end
-
-
-
-
 
 
 
@@ -95,9 +92,6 @@ end
 # test3 = Door.new(false, true)
 # puts test3.open
 # expect it would be false, or display a message that says,"you cannot open a locked door."
-
-
-
 
 
 ## OpenDoor ##
