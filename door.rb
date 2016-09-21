@@ -39,20 +39,43 @@ class Door
       # if door is closed,
       is_door_open == false && is_door_locked == true
       puts "You cannot close, a locked door."
-    end 
+    end
 
 
   end
-  #
-  # def lock()
-  #
-  # end
-  #
-  # def unlock()
-  #
-  # end
+
+  def lock()
+    # if door is closed, && its unlocked
+    if is_door_open == false && is_door_locked == false
+      # then you can, lock the door.
+      is_door_locked = true
+    elsif is_door_open == true
+      # if the door is in an opened state, it cannot be locked.
+      puts "You can't lock an open door!"
+    else
+      #if the door is closed, && its locked, you cant already lock it agin.
+      is_door_open == false && is_door_locked == true
+      puts "You can't techincally lock an already locked door."
+    end
+  end
+
+  def unlock()
+    # if door is closed, && door is locked.
+    if is_door_open == false && is_door_locked == true
+      # then you can lock the door!
+      is_door_locked = false
+    elsif
+      # if the door is closed, && door unlocked - you cannot unlock door.
+      is_door_open == false && is_door_locked == false
+      puts "You cant unlock, and unlocked door, friend!" 
+    end
+  end
 
 end
+
+
+
+
 
 
 
