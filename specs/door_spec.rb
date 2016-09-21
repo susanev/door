@@ -20,8 +20,8 @@ describe Door do
   end
 
   #02
-  skip
   it "test, to see that if the door is closed (as in not opened), and that its unlocked it can be opened." do
+    skip
     # as in, is_door_open = false and is_door_locked = false
     # door is closed, and unlocked.
     door = Door.new(false, false)
@@ -31,16 +31,16 @@ describe Door do
   #03
   skip
   #door cannot be locked.
-  it "Test to see if open door cannot be locked. Should return nil(?)"
+  it "Test to see if open door cannot be locked. Should return nil(?)" do
     door1 = Door.new(true, true)
     expect(door1.lock).must_equal(nil)
     # or argument error.
   end
 
   #04
-  skip
   #open door cannot be unlocked.
-  it "Test to see if an open door cannot be unlocked."
+  it "Test to see if an open door cannot be unlocked." do
+  skip
     door = Door.new(true, true)
     expect(door.unlock).must_equal(nil)
     # or raise an argument error.
@@ -53,30 +53,30 @@ describe Door do
     ## can be locked
     ## cannot be unlocked
 #05
-  skip
   it "Test to see if a closed door, can be opened" do
+    skip
     door = Door.new(false, true)
     expect(door.open).must_equal(true)
   end
 
 #06
-  skip
   it "Test to see if a closed door, CANNOT be closed." do
+    skip
     door = Door.new(false, true)
     expect(door.close).must_equal(nil)
     # eventually, raise argument error?
   end
 
 #07
-  skip
   it "Test to see if a closed door, can be locked " do
+  skip
     door = Door.new(false, false)
     expect(door.locked).must_equal(nil)
   end
 
 #08
-  skip
   it "Test to see if a closed door, CANNOT be unlocked " do
+  skip
     door = Door.new(false, false)
     expect(door.unlock).must_equal(nil)
   end
@@ -94,22 +94,22 @@ describe Door do
   end
 
 #10
-  skip
   it "Test to see if a locked door, CANNOT closed " do
+    skip
     door = Door.new(true, true)
     expect(door.close).must_equal()
     # or raise an argument errror?
   end
 
 #11
-  skip
   it "Test to see if a locked door, CANNOT locked " do
+    skip
     door = Door.new(true, true)
     expect(door.locked).must_equal()
   end
 #12
-  skip
   it "Test to see if a locked door, can be unlocked" do
+    skip
     door = Door.new(true, true)
     expect(door.unlock).must_equal(nil)
   end
