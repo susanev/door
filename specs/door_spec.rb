@@ -29,9 +29,9 @@ describe Door do
   end
 
   #03
-  skip
   #door cannot be locked.
   it "Test to see if open door cannot be locked. Should return nil(?)" do
+    skip
     door1 = Door.new(true, true)
     expect(door1.lock).must_equal(nil)
     # or argument error.
